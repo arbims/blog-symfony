@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<a href="{{ path('admin_categories_add')}}" class="btn btn-primary">Ajouter</a>
+
+<table class="table table-striped">
+  <thead>
+    <th>Nom</th>
+    <th>Slug</th>
+    <th>Action</th>
+  </thead>
+
+  <tbody>
+  {% for cat in categories %}
+    <tr>
+      <td>{{ cat.name }}</td>
+      <td>{{ cat.slug }}</td>
+      <td>{{ cat.name }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
